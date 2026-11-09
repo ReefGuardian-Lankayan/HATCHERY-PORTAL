@@ -1049,16 +1049,16 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
 
 @keyframes incubate-internal-glow {
   /* Start dim */
-  0% { box-shadow: var(--shadow-sm), inset 0 0 0px #fa661c(245, 158, 11, 0); }
+  0% { box-shadow: var(--shadow-sm), inset 0 0 0px #db4141(245, 158, 11, 0); }
   
   /* Glow on */
   20% { box-shadow: var(--shadow-sm), inset 0 0 15px #fa661c73; }
   
   /* Hold the glow from 20% to 60% of the animation (0.8s to 2.4s) */
-  60% { box-shadow: var(--shadow-sm), inset 0 0 30px #fa661cb9; }
+  60% { box-shadow: var(--shadow-sm), inset 0 0 30px #db4141; }
   
   /* Fade out */
-  100% { box-shadow: var(--shadow-sm), inset 0 0 0px #fa661c(245, 158, 11, 0); }
+  100% { box-shadow: var(--shadow-sm), inset 0 0 0px #db4141(245, 158, 11, 0); }
 }
 
 /* --- 3. EXPECTING SOON: The Shake --- */
