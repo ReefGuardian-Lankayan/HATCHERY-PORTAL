@@ -51,8 +51,8 @@
 
   /* Status colours */
   --incubating-bg: #d1fae5;
-  --incubating-fg: #065f46;
-  --incubating-accent: #10b981;
+  --incubating-fg: #9b211cd0;
+  --incubating-accent: #db4141;
 
   --expecting-bg: #fef3c7;
   --expecting-fg: #92400e;
@@ -1044,7 +1044,7 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
 /* --- 2. INCUBATING: The "Internal Oven" Glow --- */
 .nest-card[data-status="Incubating"] {
   /* Increased duration to 4s to give it more time to hold and rest */
-  animation: incubate-internal-glow 4s infinite ease-in-out;
+  animation: incubate-internal-glow 3s infinite ease-in-out;
 }
 
 @keyframes incubate-internal-glow {
@@ -1052,10 +1052,10 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
   0% { box-shadow: var(--shadow-sm), inset 0 0 0px #fa661c(245, 158, 11, 0); }
   
   /* Glow on */
-  20% { box-shadow: var(--shadow-sm), inset 0 0 20px #fa661c; }
+  20% { box-shadow: var(--shadow-sm), inset 0 0 15px #fa661c73; }
   
   /* Hold the glow from 20% to 60% of the animation (0.8s to 2.4s) */
-  60% { box-shadow: var(--shadow-sm), inset 0 0 60px #fa661c; }
+  60% { box-shadow: var(--shadow-sm), inset 0 0 30px #fa661cb9; }
   
   /* Fade out */
   100% { box-shadow: var(--shadow-sm), inset 0 0 0px #fa661c(245, 158, 11, 0); }
