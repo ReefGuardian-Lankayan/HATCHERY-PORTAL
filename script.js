@@ -824,6 +824,19 @@
     populateYearFilter();
     bindEvents();
     applyFilters();
+
+    // NEW: Hide the loading screen once data is rendered
+    var loader = document.getElementById("loadingScreen");
+    if (loader) {
+      // We use a tiny timeout so the browser has a split second to paint the cards 
+      // before the loader fades out.
+      setTimeout(function() {
+        loader.classList.add("is-hidden");
+        
+        // Optional: Remove the element from the DOM entirely after it fades out
+        setTimeout(function() { loader.remove(); }, 600);
+      }, 2000); // Wait 2 seconds so the animation has time to play
+    }
   }
 
   if (document.readyState === "loading") {

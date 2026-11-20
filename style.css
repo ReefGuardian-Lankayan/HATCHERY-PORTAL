@@ -218,18 +218,20 @@ button {
 
 .brand__eyebrow {
   margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgb(255, 255, 255);
 }
 
 .brand__title {
   margin: 4px 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.4rem, 5.6vw, 2rem);
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 
@@ -1329,5 +1331,55 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
     position: static !important; /* Forces the browser to scroll it away normally */
     top: unset !important;       /* Removes the sticky top anchor */
     z-index: 1 !important;       /* Drops it below the floating buttons */
+  }
+}
+/* =============================================================
+   LOADING SCREEN
+   ============================================================= */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999; /* Sits above absolutely everything */
+  background-color: var(--page-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Transition for when the screen fades out */
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* This class is added by JavaScript when the site is ready */
+.loading-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-screen__logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  
+  /* Start as greyscale and slightly shrunken */
+  filter: grayscale(100%) opacity(0);
+  transform: scale(0.8);
+  
+  /* The "Color Pop" Animation */
+  animation: color-pop 1.5s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes color-pop {
+  0% {
+    filter: grayscale(100%) opacity(0);
+    transform: scale(0.7);
+  }
+  50% {
+    filter: grayscale(100%) opacity(1);
+    transform: scale(0.8);
+  }
+  100% {
+    filter: grayscale(0%) opacity(1); /* Full color */
+    transform: scale(1); /* Pops to full size */
   }
 }
