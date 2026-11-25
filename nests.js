@@ -534,7 +534,7 @@ const nestsData = [
 { id: "2026-Nest #390", year: 2026, species: 1, layDate: "2026-09-27", eggCount: 81, hatchedDay: null, adopter: null },
 { id: "2026-Nest #391", year: 2026, species: 1, layDate: "2026-09-28", eggCount: 58, hatchedDay: null, adopter: "Viktoria Lantrat & Sergei Plotnikov" },
 { id: "2026-Nest #392", year: 2026, species: 1, layDate: "2026-09-29", eggCount: 96, hatchedDay: null, adopter: null },
-{ id: "2026-Nest #393", year: 2026, species: 1, layDate: "2026-09-30", eggCount: 82, hatchedDay: null, adopter: null },
+{ id: "2026-Nest #393", year: 2026, species: 1, layDate: "2026-09-30", eggCount: 82, hatchedDay: "2026-11-24", adopter: null },
 { id: "2026-Nest #394", year: 2026, species: 1, layDate: "2026-09-30", eggCount: 97, hatchedDay: null, adopter: null },
 { id: "2026-Nest #395", year: 2026, species: 1, layDate: "2026-10-02", eggCount: 90, hatchedDay: null, adopter: null },
 { id: "2026-Nest #396", year: 2026, species: 2, layDate: "2026-10-02", eggCount: 128, hatchedDay: null, adopter: "Sara Oliveira" },
